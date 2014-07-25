@@ -1,0 +1,92 @@
+{"frames": {
+
+"body.png":
+{
+	"frame": {"x":146,"y":2,"w":79,"h":105},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":79,"h":105},
+	"sourceSize": {"w":79,"h":105}
+},
+"hand_left.png":
+{
+	"frame": {"x":103,"y":2,"w":41,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":60},
+	"sourceSize": {"w":41,"h":60}
+},
+"hand_right.png":
+{
+	"frame": {"x":64,"y":2,"w":37,"h":57},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":57},
+	"sourceSize": {"w":37,"h":57}
+},
+"hat.png":
+{
+	"frame": {"x":2,"y":109,"w":124,"h":91},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":124,"h":91},
+	"sourceSize": {"w":124,"h":91}
+},
+"head.png":
+{
+	"frame": {"x":2,"y":202,"w":228,"h":201},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":228,"h":201},
+	"sourceSize": {"w":228,"h":201}
+},
+"head2.png":
+{
+	"frame": {"x":2,"y":608,"w":228,"h":201},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":228,"h":201},
+	"sourceSize": {"w":228,"h":201}
+},
+"head3.png":
+{
+	"frame": {"x":2,"y":811,"w":228,"h":201},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":228,"h":201},
+	"sourceSize": {"w":228,"h":201}
+},
+"head4.png":
+{
+	"frame": {"x":2,"y":405,"w":228,"h":201},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":228,"h":201},
+	"sourceSize": {"w":228,"h":201}
+},
+"leg_left.png":
+{
+	"frame": {"x":2,"y":2,"w":29,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":54},
+	"sourceSize": {"w":29,"h":54}
+},
+"leg_right.png":
+{
+	"frame": {"x":33,"y":2,"w":29,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":54},
+	"sourceSize": {"w":29,"h":54}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "papapino_spritesheet.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:add78b7be09835cbbd3118613a4b9756$"
+}
+}
