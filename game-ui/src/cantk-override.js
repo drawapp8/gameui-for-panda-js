@@ -55,7 +55,11 @@ CanTK.UIElement.prototype.closeWindow = function(retInfo) {
 			if(win) {
 				win.callOnClose(retInfo);
 			}
-			GameUI.stage.removeChild(view);
+
+			setTimeout(function() {
+				GameUI.stage.removeChild(view);
+				view.onRemoved();
+			}, 0);
 		});
 	}
 	else {
@@ -63,6 +67,7 @@ CanTK.UIElement.prototype.closeWindow = function(retInfo) {
 			win.callOnClose(retInfo);
 		}
 		GameUI.stage.removeChild(view);
+		view.onRemoved();
 	}
 
 	return;
@@ -85,3 +90,59 @@ CanTK.UIElement.prototype.saveState = function() {
 	return;
 };
 
+CanTK.UIElement.prototype.setPosition = function(x, y) {
+	this.x = x;
+	this.y = y;
+
+	return;
+}
+
+Physics = CanTK.Physics;
+Physics.updateBodyElementsPosition = function(world) {
+	for (var b = world.m_bodyList; b; b = b.m_next) {
+		var element = b.element;
+
+		var p = b.GetWorldCenter();
+		if(element && element.view) {
+			var view = element.view;
+			var p = b.GetWorldCenter();
+			var a = b.GetAngle();
+
+			if(p.x || p.y) {
+				var x = Physics.toPixel(p.x) - (element.w >> 1);
+				var y = Physics.toPixel(p.y) - (element.h >> 1);
+
+				view.setX(x);
+				if(view.normalizeY) {
+					view.setY(view.normalizeY(y));
+				}
+				else {
+					view.setY(y);
+				}
+				view.setRotation(a);
+			}
+		}
+	}
+
+	return;
+
+	for (var joint = world.m_jointList; joint; joint = joint.m_next) {
+		switch (joint.m_type) {
+			case b2Joint.e_distanceJoint: {
+				break;
+			}
+			case b2Joint.e_pulleyJoint: {
+				break;
+			}
+			default: {
+				var p = joint.GetAnchorA();
+				var element = joint.element;
+				element.x = Physics.toPixel(p.x) - (element.w >> 1);
+				element.y = Physics.toPixel(p.y) - (element.h >> 1);
+				break;
+			}
+		}
+	}
+
+	return;
+}
